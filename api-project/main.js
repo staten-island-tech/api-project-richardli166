@@ -1,3 +1,5 @@
+import './style.css'
+
 //go get basketball data
 //give huge delay make user wait be a trash website 
 //show data
@@ -15,7 +17,7 @@ Aaron.then((result) => {
     console.log(result);
 }); */
 //REST API aplication program interface, rest endpoints
-const URL = `https://api.quoteable.io/random`;
+const URL = `https://tetr.io/about/api/`;
 
 async function getData(URL){
     try{
@@ -27,8 +29,8 @@ async function getData(URL){
         const data = await response.json();
         console.log(data);
         console.log(data);
-        document.querySelector("h1").textCotent = data.content;
-        document.querySelector("h2").textCotent = data.author;
+        document.querySelector("h1").textContent = data.content;
+        document.querySelector("h2").textContent = data.author;
     } catch (error) {
         document.querySelector("h1").textContent = error;
     }
