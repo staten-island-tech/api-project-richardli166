@@ -17,27 +17,50 @@ Aaron.then((result) => {
     console.log(result);
 }); */
 //REST API aplication program interface, rest endpoints
-const URL = `https://tetr.io/about/api/`;
 
-async function getData(URL){
-    try{
-        if(response.status != 200){
+const URL = `https://cors-anywhere.herokuapp.com/https://ch.tetr.io/api/users/lists/league`;
+
+
+async function getData(URL) {
+    try {
+        const response = await fetch(URL);
+        if (response.status != 200) {
             throw new Error(response.statusText);
         }
-        const response = await fetch(URL);
-        console.log(response);
         const data = await response.json();
+/*         document.querySelector(".cards").textContent = data.content;
+        console.log(data.content); */
         console.log(data);
-        console.log(data);
-        document.querySelector("h1").textContent = data.content;
-        document.querySelector("h2").textContent = data.author;
+
     } catch (error) {
-        document.querySelector("h1").textContent = error;
+        console.log("oopai, error meh");
+        document.querySelector(".cards").textContent = "Your subscription go bye bye";
     }
 }
+
 getData(URL);
 
+const URL = `https://api.chess.com/pub/leaderboards`;
 
+
+async function getData(URL) {
+    try {
+        const response = await fetch(URL);
+        if (response.status != 200) {
+            throw new Error(response.statusText);
+        }
+        const data = await response.json();
+        document.querySelector(".cards").textContent = data.content;
+        console.log(data.content); */
+        console.log(data);
+
+    } catch (error) {
+        console.log("oopai, error meh");
+        document.querySelector(".cards").textContent = "Your subscription go bye bye";
+    }
+}
+
+getData(URL);
 
 
 /* const URL = `https://api.quoteable.io/random`;
@@ -59,4 +82,3 @@ async function getData(URL){
     }
 }
 getData(URL);
- */
