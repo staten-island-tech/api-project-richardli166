@@ -1,4 +1,3 @@
-import './style.css'
 
 //go get basketball data
 //give huge delay make user wait be a trash website 
@@ -18,8 +17,8 @@ Aaron.then((result) => {
 }); */
 //REST API aplication program interface, rest endpoints
 
-const URL = `https://cors-anywhere.herokuapp.com/https://ch.tetr.io/api/users/lists/league`;
 
+const URL = `https://cors-anywhere.herokuapp.com/https://ch.tetr.io/api/users/lists/league/all`;
 
 async function getData(URL) {
     try {
@@ -30,16 +29,18 @@ async function getData(URL) {
         const data = await response.json();
 /*         document.querySelector(".cards").textContent = data.content;
         console.log(data.content); */
+
         console.log(data);
 
     } catch (error) {
-        console.log("oopai, error meh");
+        console.log("error");
         document.querySelector(".cards").textContent = "Your subscription go bye bye";
     }
 }
-
 getData(URL);
 
+
+/*
 const URL = `https://api.chess.com/pub/leaderboards`;
 
 
@@ -50,18 +51,19 @@ async function getData(URL) {
             throw new Error(response.statusText);
         }
         const data = await response.json();
-        document.querySelector(".cards").textContent = data.content;
+    /*    document.querySelector(".cards").textContent = data.content;
         console.log(data.content); */
+        /*
         console.log(data);
 
     } catch (error) {
-        console.log("oopai, error meh");
-        document.querySelector(".cards").textContent = "Your subscription go bye bye";
+        console.log("error");
+        document.querySelector(".cards").textContent = "error";
     }
 }
 
 getData(URL);
-
+*/
 
 /* const URL = `https://api.quoteable.io/random`;
 
@@ -82,3 +84,4 @@ async function getData(URL){
     }
 }
 getData(URL);
+*/
