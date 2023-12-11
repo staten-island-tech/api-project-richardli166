@@ -17,7 +17,7 @@ Aaron.then((result) => {
 }); */
 //REST API aplication program interface, rest endpoints
 
-/* 
+/*
 const URL = `https://ch.tetr.io/api/users/lists/league/all`;
 
 async function getData(URL) {
@@ -38,7 +38,7 @@ async function getData(URL) {
     }
 }
 getData(URL);
- */
+*/
 
 
 const URL = `https://api.chess.com/pub/leaderboards`;
@@ -64,7 +64,8 @@ async function getData(URL) {
 
 getData(URL);
 
-/* const URL = `https://api.quoteable.io/random`;
+/* 
+const URL = `https://api.quoteable.io/random`;
 
 async function getData(URL){
     try{
