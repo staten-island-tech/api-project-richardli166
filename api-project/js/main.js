@@ -17,8 +17,8 @@ Aaron.then((result) => {
 }); */
 //REST API aplication program interface, rest endpoints
 
-
-const URL = `https://cors-anywhere.herokuapp.com/https://ch.tetr.io/api/users/lists/league/all`;
+/* 
+const URL = `https://ch.tetr.io/api/users/lists/league/all`;
 
 async function getData(URL) {
     try {
@@ -29,7 +29,7 @@ async function getData(URL) {
         const data = await response.json();
 /*         document.querySelector(".cards").textContent = data.content;
         console.log(data.content); */
-
+/*
         console.log(data);
 
     } catch (error) {
@@ -38,9 +38,9 @@ async function getData(URL) {
     }
 }
 getData(URL);
+ */
 
 
-/*
 const URL = `https://api.chess.com/pub/leaderboards`;
 
 
@@ -53,7 +53,7 @@ async function getData(URL) {
         const data = await response.json();
     /*    document.querySelector(".cards").textContent = data.content;
         console.log(data.content); */
-        /*
+
         console.log(data);
 
     } catch (error) {
@@ -63,7 +63,6 @@ async function getData(URL) {
 }
 
 getData(URL);
-*/
 
 /* const URL = `https://api.quoteable.io/random`;
 
