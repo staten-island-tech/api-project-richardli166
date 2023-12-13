@@ -1,4 +1,4 @@
-import {data} from "./array"
+import {getData} from "./array"
 
 
 

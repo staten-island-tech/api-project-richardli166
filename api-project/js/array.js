@@ -1,6 +1,5 @@
 const URL = `https://api.chess.com/pub/leaderboards`;
 
-
 async function getData(URL) {
     try {
         const response = await fetch(URL);
@@ -15,3 +14,6 @@ async function getData(URL) {
     }
 }
 getData(URL);
+export {getData};
+
+//https://api.chess.com/pub/player/{username}/stats
