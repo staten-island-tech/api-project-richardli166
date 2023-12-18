@@ -1,6 +1,6 @@
-const URL = `https://api.chess.com/pub/leaderboards`;
-
-async function getData(URL) {
+const endpointlearderboards = `https://api.chess.com/pub/leaderboards`;
+const endpointplayer = 'https://api.chess.com/pub/player/'
+async function getData(endpointlearderboards) {
     try {
         const response = await fetch(URL);
         if (response.status != 200) {
@@ -13,7 +13,8 @@ async function getData(URL) {
         document.querySelector(".cards").textContent = "error";
     }
 }
-getData(URL);
+getData(endpointlearderboards);
+
 export {getData};
 
 
