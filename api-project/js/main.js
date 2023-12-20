@@ -1,4 +1,4 @@
-import {getleaderboard, getplayerdata} from "./array"
+import {/*getleaderboard, */getplayerdata} from "./array"
 import {searched} from "./insert"
 
 

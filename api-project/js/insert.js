@@ -1,4 +1,8 @@
-function input(){
+const DOMSelectors = {
+    form: document.querySelector("#form")
+}
+
+function searched(){
     `<div class="inserts">
         <h1 class="playername">${DOMSelectors.username.value}</h1>
     </div>`
@@ -8,8 +12,9 @@ function clearfield(){
 }
 DOMSelectors.form.addEventListener("submit", function (event){
     event.preventDefault();
-    input();
+    searched();
     clearfield();
 });
 
 export {searched};
+

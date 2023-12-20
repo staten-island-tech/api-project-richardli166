@@ -1,7 +1,7 @@
 import {searched} from ".insert"
 
-const endpointlearderboards = `https://api.chess.com/pub/leaderboards`;
-const endpointplayer = 'https://api.chess.com/pub/player/'
+/* const endpointlearderboards = `https://api.chess.com/pub/leaderboards`;
+let endpointplayer = 'https://api.chess.com/pub/player/'
 async function getleaderboard(endpointlearderboards) {
     try {
         const response = await fetch(URL);
@@ -15,7 +15,7 @@ async function getleaderboard(endpointlearderboards) {
         document.querySelector(".cards").textContent = "error";
     }
 }
-getleaderboard(endpointplayer);
+getleaderboard(endpointplayer); */
 
 async function getplayerdata(endpointplayer) {
     try {
@@ -32,7 +32,7 @@ async function getplayerdata(endpointplayer) {
 }
 getplayerdata(endpointlearderboards);
 
-export {getleaderboard};
+/*export {getleaderboard}; */
 export {getplayerdata};
 
 
