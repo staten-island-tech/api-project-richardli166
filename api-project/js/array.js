@@ -16,7 +16,7 @@ async function getleaderboard(endpointlearderboards) {
     }
 }
 getleaderboard(endpointplayer); */
-
+ 
 async function getplayerdata(endpointplayer) {
     try {
         const response = await fetch(URL);
