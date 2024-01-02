@@ -1,4 +1,4 @@
-import {searched} from ".insert"
+/* import {searched} from ".insert" */
 
 /* const endpointlearderboards = `https://api.chess.com/pub/leaderboards`;
 let endpointplayer = 'https://api.chess.com/pub/player/'
@@ -17,7 +17,11 @@ async function getleaderboard(endpointlearderboards) {
 }
 getleaderboard(endpointplayer); */
  
-async function getplayerdata(endpointplayer) {
+
+export let apiDataArray = [];
+
+
+/* async function getplayerdata(endpointplayer) {
     try {
         const response = await fetch(URL);
         if (response.status != 200) {
@@ -33,7 +37,13 @@ async function getplayerdata(endpointplayer) {
 getplayerdata(endpointlearderboards);
 
 /*export {getleaderboard}; */
+/*
 export {getplayerdata};
+ */
+
+
+
+
 
 
 
