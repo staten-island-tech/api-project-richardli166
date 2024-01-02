@@ -3,35 +3,34 @@ import { insertData1, insertData2 } from './inserts.js';
 
 async function fetchData(endpoint) {
     try {
-        const response = await fetch(endpoint);
-        if (!response.ok) {
-            throw new Error(`API request failed with status ${response.status}`);
+        const response = await fetch(URL);
+        if (response.status != 200) {
+            throw new Error(response.statusText);
         }
         const data = await response.json();
-        return data;
+        console.log(data);
     } catch (error) {
-        alert(`Error: ${error.message}`);
-        return null;
+        console.log("error");
     }
 }
 
 document.getElementById('btn1').addEventListener('click', async () => {
-    const endpoint = 'URL_OF_ENDPOINT_1';
+    const endpoint = 'https://api.chess.com/pub/leaderboards';
     const data = await fetchData(endpoint);
     
     if (data) {
-        apiDataArray.push(data); // Store data in array
-        insertData1(data); // Display data on the page using the insert function
+        apiDataArray.push(data);
+        insertData1(data);
     }
 });
 
 document.getElementById('btn2').addEventListener('click', async () => {
-    const endpoint = 'URL_OF_ENDPOINT_2';
+    const endpoint = 'https://api.chess.com/pub/puzzle';
     const data = await fetchData(endpoint);
     
     if (data) {
-        apiDataArray.push(data); // Store data in array
-        insertData2(data); // Display data on the page using the insert function
+        apiDataArray.push(data);
+        insertData2(data);
     }
 });
 
