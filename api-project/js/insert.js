@@ -1,4 +1,22 @@
-export function insertData1(data) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* export function insertData1(data) {
     const dataContainer = document.getElementById('data1');
     dataContainer.innerHTML = data.map(item => `<p>${item}</p>`).join('');
 }
@@ -7,7 +25,7 @@ export function insertData2(data) {
     const dataContainer = document.getElementById('data2');
     dataContainer.innerHTML = data.map(item => `<p>${item}</p>`).join('');
 }
-
+ */
 
 
 

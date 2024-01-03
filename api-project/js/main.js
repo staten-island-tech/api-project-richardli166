@@ -1,5 +1,78 @@
-import { apiDataArray } from './array.js';
+import "../css/style.css";
+import {DOMSelectors} from './domselectors.js';
+
+const leaderboard = `https://api.chess.com/pub/leaderboards`;
+
+DOMSelectors.btn1.addEventListener("click", function (event){
+    
+    async function getData(leaderboard) {
+        try {
+            const response = await fetch(leaderboard);
+            if (response.status != 200) {
+                throw new Error(response.statusText);
+            }
+            const data = await response.json();
+            data.daily.forEach((player) => 
+            DOMSelectors.display.insertAdjacentHTML("beforeend",
+                `<div class="display-card">
+                <h2 class="display-username">${player.username}</h2>
+                <h2 class="display-score">${player.score}</h2>
+                <h2 class="display-rank">"${player.rank}"</h2>
+                </div>`
+                )
+            )
+            console.log(data);
+        } catch (error) {
+            console.log("error");
+        }
+    }
+    getData(leaderboard);
+}
+);
+
+const URL = "https://api.chess.com/pub/player/";
+
+DOMSelectors.form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nURL = URL + DOMSelectors.search.value;
+
+  async function getName(nURL) {
+    try {
+      const response = await fetch(nURL);
+      if (response.status != 200) {
+        throw new Error(response.statusText);
+      }
+      const data = await response.json();
+
+      DOMSelectors.profile.insertAdjacentHTML("beforeend",
+        `<div class="profile-card">
+          <h2 class="profile-username">${data.username}</h2>
+          <h2 class="profile-country">${data.location}</h2>
+          <img src="${data.avatar}" class="profile-avatar">
+        </div>`
+      );
+
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  getName(nURL);
+});
+
+
+
+
+
+
+
+
+/* import { apiDataArray } from './array.js';
 import { insertData1, insertData2 } from './inserts.js';
+
+
 
 async function fetchData(endpoint) {
     try {
@@ -33,7 +106,7 @@ document.getElementById('btn2').addEventListener('click', async () => {
         insertData2(data);
     }
 });
-
+ */
 //go get basketball data
 //give huge delay make user wait be a trash website 
 //show data
