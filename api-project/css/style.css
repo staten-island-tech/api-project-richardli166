@@ -1,20 +1,17 @@
 :root {
     --black: #000;
-    --light-blue: #8dc5fa;
-    --dark-blue: #2d7ef8;
-    --light-red: #fd9797;
-    --dark-red: #ff2929;
-    --d-red: #fd7272;
-    --d-blue: #77aefc;
+    --light-blue: #59bec0;
+    --dark-blue: rgb(45, 146, 254);
+    --light-red: #e08080;
+    --dark-red: #ff0000;
   
-    --primary: var(--light-red);
-    --secondary: var(--dark-red);
-  
-    --h1: 7.594rem;
-    --h2: 4.063rem;
-    --h3: 3.375rem;
-    --h4: 2.25rem;
+    --primary: var(--light-blue);
+    --secondary: var(--dark-blue);
   }
+
+body{
+  background-color: aqua;
+}
 
 #display{
     display: flex;
@@ -32,10 +29,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 28%;
-    height: 45rem;
+    width: 25%;
     margin: 1rem auto;
-    background-color: var(--d-red);
+    background-color: var(--dark-blue);
     align-items: center;
     box-shadow: var(--primary) 1rem 1rem 1rem;
   }
@@ -56,15 +52,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 28%;
+    width: 25%;
     height: 45rem;
     margin: 1rem auto;
-    background-color: var(--d-red);
+    background-color: var(--dark-blue);
     align-items: center;
     box-shadow: var(--primary) 1rem 1rem 1rem;
   }
 
-
+#btn1{
+  border: 0;
+  background-color: var(--dark-blue);
+  border-radius: 30px;
+  padding: 5px;
+  margin: 1px;
+  align-items: center;
+  margin-top: 5px;
+}
 
 
 

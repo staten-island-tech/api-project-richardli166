@@ -4,7 +4,7 @@ import {DOMSelectors} from './domselectors.js';
 const leaderboard = `https://api.chess.com/pub/leaderboards`;
 
 DOMSelectors.btn1.addEventListener("click", function (event){
-    
+    DOMSelectors.display.innerHTML = "";
     async function getData(leaderboard) {
         try {
             const response = await fetch(leaderboard);
@@ -15,9 +15,9 @@ DOMSelectors.btn1.addEventListener("click", function (event){
             data.daily.forEach((player) => 
             DOMSelectors.display.insertAdjacentHTML("beforeend",
                 `<div class="display-card">
-                <h2 class="display-username">${player.username}</h2>
-                <h2 class="display-score">${player.score}</h2>
-                <h2 class="display-rank">"${player.rank}"</h2>
+                <h2 class="display-username">Username: ${player.username}</h2>
+                <h2 class="display-score">Score: ${player.score}</h2>
+                <h2 class="display-rank">Rank: ${player.rank}</h2>
                 </div>`
                 )
             )
@@ -34,7 +34,7 @@ const URL = "https://api.chess.com/pub/player/";
 
 DOMSelectors.form.addEventListener("submit", function(event) {
   event.preventDefault();
-
+  DOMSelectors.display.innerHTML = "";
   const nURL = URL + DOMSelectors.search.value;
 
   async function getName(nURL) {
@@ -47,8 +47,8 @@ DOMSelectors.form.addEventListener("submit", function(event) {
 
       DOMSelectors.profile.insertAdjacentHTML("beforeend",
         `<div class="profile-card">
-          <h2 class="profile-username">${data.username}</h2>
-          <h2 class="profile-country">${data.location}</h2>
+          <h2 class="profile-username">Username: ${data.username}</h2>
+          <h2 class="profile-country">Country: ${data.location}</h2>
           <img src="${data.avatar}" class="profile-avatar">
         </div>`
       );
