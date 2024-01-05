@@ -18,22 +18,23 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 90vw;
     margin: 2rem auto;
   }
 .display-card{
-    border: 0.5rem solid;
-    border-color: var(--primary);
-    border-radius: 2rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 25%;
-    margin: 1rem auto;
-    background-color: var(--dark-blue);
-    align-items: center;
-    box-shadow: var(--primary) 1rem 1rem 1rem;
+  border: 0.5rem solid;
+  border-color: var(--primary);
+  border-radius: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  background-color: var(--dark-blue);
+  align-items: center;
+  box-shadow: var(--primary) 1rem 1rem 1rem;
+  padding: 50px;
+  width: 20%;
+  margin-bottom: 50px;  
   }
 
   #profile{
@@ -42,7 +43,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90vw;
-    margin: 2rem auto;
+    margin: auto;
   }
 .profile-card{
     border: 0.5rem solid;
@@ -52,13 +53,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 25%;
-    height: 45rem;
-    margin: 1rem auto;
+    margin: auto;
     background-color: var(--dark-blue);
     align-items: center;
     box-shadow: var(--primary) 1rem 1rem 1rem;
+    padding: 50px;
+    width: 20%;
+    margin-bottom: 50px;  
   }
+
 
 #btn1{
   border: 0;
@@ -71,10 +74,3 @@ body{
 }
 
 
-
-div {
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-height: 200px;
-    overflow-y: auto;
-}

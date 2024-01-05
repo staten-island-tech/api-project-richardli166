@@ -5,4 +5,5 @@ const DOMSelectors = {
     form: document.getElementById("form"),
     profile: document.getElementById("profile"),
 };
+
 export {DOMSelectors};

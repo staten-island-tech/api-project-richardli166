@@ -5,6 +5,7 @@ const leaderboard = `https://api.chess.com/pub/leaderboards`;
 
 DOMSelectors.btn1.addEventListener("click", function (event){
     DOMSelectors.display.innerHTML = "";
+    DOMSelectors.profile.innerHTML = "";
     async function getData(leaderboard) {
         try {
             const response = await fetch(leaderboard);
@@ -35,6 +36,7 @@ const URL = "https://api.chess.com/pub/player/";
 DOMSelectors.form.addEventListener("submit", function(event) {
   event.preventDefault();
   DOMSelectors.display.innerHTML = "";
+  DOMSelectors.profile.innerHTML = "";
   const nURL = URL + DOMSelectors.search.value;
 
   async function getName(nURL) {
@@ -49,7 +51,8 @@ DOMSelectors.form.addEventListener("submit", function(event) {
         `<div class="profile-card">
           <h2 class="profile-username">Username: ${data.username}</h2>
           <h2 class="profile-country">Country: ${data.location}</h2>
-          <img src="${data.avatar}" class="profile-avatar">
+          <h2>Avatar:</h2>
+          <img src= "${data.avatar}" class="profile-avatar">
         </div>`
       );
 
