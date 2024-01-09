@@ -47,7 +47,7 @@ DOMSelectors.form.addEventListener("submit", function(event) {
           <h2 class="profile-username">Username: ${data.username}</h2>
           <h2 class="profile-country">Country: ${data.location}</h2>
           <h2>Avatar:</h2>
-          <img src= "${data.avatar}" class="profile-avatar">
+          <img src= "${data.avatar}" alt="${data.avatar}" class="profile-avatar">
         </div>`
       );
 
