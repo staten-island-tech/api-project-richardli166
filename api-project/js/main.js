@@ -3,9 +3,6 @@ import {DOMSelectors} from './domselectors.js';
 
 const leaderboard = `https://api.chess.com/pub/leaderboards`;
 
-DOMSelectors.btn1.addEventListener("click", function (event){
-    DOMSelectors.display.innerHTML = "";
-    DOMSelectors.profile.innerHTML = "";
     async function getData(leaderboard) {
         try {
             const response = await fetch(leaderboard);
@@ -28,8 +25,6 @@ DOMSelectors.btn1.addEventListener("click", function (event){
         }
     }
     getData(leaderboard);
-}
-);
 
 const URL = "https://api.chess.com/pub/player/";
 
